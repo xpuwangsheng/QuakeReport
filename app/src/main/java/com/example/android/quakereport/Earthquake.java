@@ -5,25 +5,51 @@ package com.example.android.quakereport;
  */
 
 public class Earthquake {
-    private String mMagnitude;
+    /** 地震震级 */
+    private double mMagnitude;
     private String mLocation;
-    private String mDate;
+    /** Time of the earthquake */
+    private long mTimeInMilliseconds;
+    /** 地震的网站 URL */
+    private String mUrl;
 
-    public Earthquake(String magnitude, String location, String date) {
+
+    /**
+     * 构造一个新的 {@link Earthquake} 对象。
+     *
+     * @param magnitude 表示地震的震级（大小）
+     * @param location 表示地震发生的位置
+     * @param timeInMilliseconds 表示地震发生时以毫秒（根据 Epoch）计的时间
+     * @param url 表示用于查找关于地震的更多详细信息的网站 URL
+     */
+    public Earthquake(double magnitude, String location, long timeInMilliseconds, String url) {
         mMagnitude = magnitude;
         mLocation = location;
-        mDate = date;
+        mTimeInMilliseconds = timeInMilliseconds;
+        mUrl = url;
     }
 
-    public String getmMagnitude() {
+    /**
+     * 返回地震的震级。
+     */
+    public double getMagnitude() {
         return mMagnitude;
     }
 
-    public String getmLocation() {
+    public String getLocation() {
         return mLocation;
     }
 
-    public String getmDate() {
-        return mDate;
+    /**
+     * 返回地震的时间。
+     */
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
+    }
+    /**
+     * 返回用于查找关于地震的更多信息的网站 URL。
+     */
+    public String getUrl() {
+        return mUrl;
     }
 }
