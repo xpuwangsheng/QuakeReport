@@ -19,11 +19,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/showTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 
     <!-- Layout for a list of earthquakes -->
     <ListView
@@ -35,10 +31,4 @@
         android:dividerHeight="0dp"
         android:orientation="vertical" />
 
-    <!--    <ListView
-            android:id="@+id/list_my"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical" />-->
 </LinearLayout>
